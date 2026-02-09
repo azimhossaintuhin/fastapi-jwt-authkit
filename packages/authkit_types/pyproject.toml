@@ -8,9 +8,32 @@ version = "0.1.0"
 description = "Type stubs for fastapi-authkit (PEP 561)."
 readme = "README.md"
 requires-python = ">=3.10"
-license = { file = "../../LICENSE" }
+license = { file = "LICENSE" }
 authors = [{ name = "Azim Hossain Tuhin" }]
+keywords = ["fastapi", "auth", "authentication", "jwt", "sqlalchemy", "async", "stubs", "typing"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Framework :: FastAPI",
+  "Topic :: Security",
+  "Topic :: Internet :: WWW/HTTP",
+  "Typing :: Typed",
+]
 dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/azimhossaintuhin/fastapi-authkit"
+Repository = "https://github.com/azimhossaintuhin/fastapi-authkit"
+Issues = "https://github.com/azimhossaintuhin/fastapi-authkit/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/authkit"]
