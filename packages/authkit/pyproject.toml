@@ -16,6 +16,9 @@ dependencies = [
   "passlib[bcrypt]>=1.7.4",
 ]
 
+[project.optional-dependencies]
+stubs = ["fastapi-authkit-stubs==0.1.0"]
+
 [project.urls]
 Repository = "https://example.com"
 
