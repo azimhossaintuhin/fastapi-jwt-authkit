@@ -1,4 +1,4 @@
-# FastAPI Auth Kit
+# FastAPI JWT Auth Kit
 
 [![PyPI version](https://badge.fury.io/py/fastapi-jwt-authkit.svg)](https://badge.fury.io/py/fastapi-jwt-authkit)
 [![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/)
