@@ -44,6 +44,11 @@ pip install fastapi-authkit
 
 > The PyPI package name is `fastapi-authkit`, the import name is `authkit`.
 
+### Typing support
+
+Type information (`.pyi` + `py.typed`) is bundled with the package for IDEs and
+static type checkers.
+
 ## Quickstart (Async)
 
 ```python
@@ -274,6 +279,13 @@ class MyRepo:
 ```
 
 Async version must expose the same methods as `async def`.
+
+## Typing Notes
+
+Type information is bundled with the package (`.pyi` + `py.typed`). If your IDE
+or type checker does not pick it up, ensure:
+
+- Your tooling supports PEP 561
 
 ## Troubleshooting
 

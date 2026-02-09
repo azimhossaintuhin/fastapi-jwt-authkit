@@ -1,28 +1,62 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
 [project]
 name = "fastapi-authkit"
 version = "0.1.0"
-description = "Add your description here"
-requires-python = ">=3.14"
+description = "FastAPI authentication toolkit with JWT, sync/async SQLAlchemy support, and built-in auth routes."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Azim Hossain Tuhin" }]
+keywords = ["fastapi", "auth", "authentication", "jwt", "sqlalchemy", "async", "security"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Framework :: FastAPI",
+    "Topic :: Security",
+    "Topic :: Internet :: WWW/HTTP",
+]
 dependencies = [
-    "fastapi-authkit",
-    "build>=1.4.0",
-    "fastapi>=0.128.2",
-    "hatchling>=1.28.0",
+    "fastapi>=0.110",
+    "python-jose[cryptography]>=3.3.0",
     "passlib[bcrypt]>=1.7.4",
     "bcrypt>=4.0.0,<5.0.0",
-    "python-jose[cryptography]>=3.5.0",
-    "sqlalchemy[asyncio]>=2.0.46",
-    "aiosqlite>=0.20.0",
+    "sqlalchemy>=2.0.0",
+    "pydantic[email]>=2.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/azimhossaintuhin/fastapi-authkit"
+Repository = "https://github.com/azimhossaintuhin/fastapi-authkit"
+Issues = "https://github.com/azimhossaintuhin/fastapi-authkit/issues"
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.4.0",
     "twine>=6.2.0",
     "uvicorn>=0.40.0",
+    "aiosqlite>=0.20.0",
     "pytest>=8.0.0",
     "httpx>=0.28.0",
     "pytest-asyncio>=0.24.0",
-    "pydantic[email]>=2.12.5",
 ]
-[tool.uv.sources]
-fastapi-authkit = { path = "packages/authkit", editable = true }
-fastapi-authkit-stubs = { path = "packages/authkit_types", editable = true }
+
+[tool.hatch.build.targets.wheel]
+packages = ["packages/authkit/src/authkit"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"packages/authkit_types/src/authkit" = "authkit"
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
