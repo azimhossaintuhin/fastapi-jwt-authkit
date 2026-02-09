@@ -216,13 +216,13 @@ Cookie names and TTL are customizable with:
 
 ## Production Checklist
 
-- [ ] `secret_key` stored in a secure secret manager
-- [ ] HTTPS enforced
-- [ ] `cookie_secure=True`, `cookie_samesite` set per app policy
-- [ ] Rotate JWT secret or use KMS-backed signing
-- [ ] Enable logging around login and refresh flows
-- [ ] Implement account lockout or rate limiting at the API gateway
-- [ ] Configure backups for the user datastore
+- [x] `secret_key` stored in a secure secret manager
+- [x] HTTPS enforced
+- [x] `cookie_secure=True`, `cookie_samesite` set per app policy
+- [x] Rotate JWT secret or use KMS-backed signing
+- [x] Enable logging around login and refresh flows
+- [x] Implement account lockout or rate limiting at the API gateway
+- [x] Configure backups for the user datastore
 
 ## Compatibility
 
