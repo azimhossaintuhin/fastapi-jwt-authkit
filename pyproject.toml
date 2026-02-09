@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "fastapi-jwt-authkit"
-version = "1.0.1"
+version = "1.0.2"
 description = "FastAPI authentication library with JWT access/refresh tokens, sync & async SQLAlchemy support, built-in auth routes (register/login/refresh/me), secure password hashing, and cookie/header token support."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -27,13 +27,9 @@ classifiers = [
     "Topic :: Internet :: WWW/HTTP",
 ]
 dependencies = [
-    "fastapi>=0.110",
     "python-jose[cryptography]>=3.3.0",
     "passlib[bcrypt]>=1.7.4",
     "bcrypt>=4.0.0,<5.0.0",
-    "sqlalchemy>=2.0.0",
-    "pydantic[email]>=2.0.0",
-    "hatch>=1.16.3",
 ]
 
 [project.urls]
@@ -42,6 +38,13 @@ Repository = "https://github.com/azimhossaintuhin/fastapi-jwt-authkit"
 Issues = "https://github.com/azimhossaintuhin/fastapi-jwt-authkit/issues"
 
 [project.optional-dependencies]
+fastapi = [
+    "fastapi>=0.110",
+    "pydantic[email]>=2.0.0",
+]
+sqlalchemy = [
+    "sqlalchemy>=2.0.0",
+]
 dev = [
     "build>=1.4.0",
     "twine>=6.2.0",
@@ -50,6 +53,9 @@ dev = [
     "pytest>=8.0.0",
     "httpx>=0.28.0",
     "pytest-asyncio>=0.24.0",
+    "fastapi>=0.110",
+    "sqlalchemy>=2.0.0",
+    "pydantic[email]>=2.0.0",
 ]
 
 [tool.hatch.build.targets.wheel]
